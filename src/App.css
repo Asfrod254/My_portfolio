@@ -107,7 +107,7 @@ h1, p {
 
 .download-container a {
     color: rgb(27, 223, 21);
-    text-decoration: none
+    text-decoration: none;
 }
 
 .download-container a:hover {
