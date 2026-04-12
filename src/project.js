@@ -14,7 +14,7 @@ function Project() {
             <a href="https://github.com/Asfrod254/My_portfolio.git" target="_blank" rel="noopener noreferrer">
               _GET_REPO
             </a>
-            <a href="https://spontaneous-alfajores-0ca503.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <a href="https://asfordmwangiportfolio.netlify.app/" target="_blank" rel="noopener noreferrer">
               _DEPLOY
             </a>
           </div>
@@ -26,9 +26,11 @@ function Project() {
             <a href="https://github.com/Asfrod254/weather_app.git" target="_blank" rel="noopener noreferrer">
               _GET_REPO
             </a>
+            <div>
             <a href="https://weatherfocuser.netlify.app/" target="_blank" rel="noopener noreferrer">
               _DEPLOY
             </a>
+            </div>
           </div>
         </li>
         <li>
