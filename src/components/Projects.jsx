@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import matrixImage from '../assets/Matrix motherboard i.png';
+import greenMatrixImage from '../assets/gemini-2.5-flash-image_turn_this_image_into_a_green_themed_advanced_matrix_image_with_high_visibility_a-0.jpg';
+import techMatrixImage from '../assets/lucid-origin_a_green_themed_advanced_tech_mathore_board_matrix_image_with_high_similarlity-0.jpg';
+import profileImage from '../assets/Asfor-img.jpg';
 
 const projects = [
   {
     title: 'StudyMeet',
     description: 'A real-time virtual classroom with WebRTC video, collaborative whiteboards, notes, chat, and classroom gamification.',
     tech: 'React, WebRTC, Socket.IO, Node.js',
+    image: greenMatrixImage,
     link: 'https://github.com/mwangiasford1/Studymeet-app',
     details: 'Supports video conferencing, teacher and student roles, interactive whiteboards, collaborative notes, chat, screen sharing, and meeting controls.'
   },
@@ -14,6 +19,7 @@ const projects = [
     title: 'Universal Accessibility Layer',
     description: 'A SaaS accessibility layer that audits, fixes, and enhances websites in real time using AI.',
     tech: 'JavaScript, AI, SaaS',
+    image: techMatrixImage,
     link: 'https://github.com/mwangiasford1/Universal-Accessibility-Layer-UAL-',
     details: 'Designed as a plug-and-play accessibility service for automated audits and real-time compliance and inclusivity improvements.'
   },
@@ -21,6 +27,7 @@ const projects = [
     title: 'Land ReGen',
     description: 'A soil health monitoring dashboard for vegetation, erosion, moisture, alerts, and recommendations.',
     tech: 'React, Node.js, Express, Supabase',
+    image: matrixImage,
     link: 'https://github.com/mwangiasford1/Land-ReGen',
     details: 'Provides region-based soil monitoring, interactive KPIs and charts, voice commands, alert management, and AI-style recommendations.'
   },
@@ -28,6 +35,7 @@ const projects = [
     title: 'PESANTE ENTERPRISES',
     description: 'A full-stack real estate platform for property listings, inquiries, appointments, and secure administration.',
     tech: 'React, Node.js, Express, MongoDB',
+    image: profileImage,
     link: 'https://github.com/mwangiasford1/PESANTE-ENTERPRICES-MAIN',
     details: 'Includes public property discovery, appointment scheduling, inquiry management, image uploads, JWT authentication, and an admin portal.'
   },
@@ -35,6 +43,7 @@ const projects = [
     title: 'Matrix Portfolio',
     description: 'A modern matrix-inspired developer portfolio experience with responsive visual sections.',
     tech: 'React, JavaScript, CSS',
+    image: greenMatrixImage,
     link: 'https://github.com/mwangiasford1/matrix-portfolio',
     details: 'A responsive portfolio project focused on an immersive visual developer presentation.'
   },
@@ -42,8 +51,57 @@ const projects = [
     title: 'Asford Browser',
     description: 'A Python browser project exploring custom navigation and desktop web experience features.',
     tech: 'Python',
+    image: techMatrixImage,
     link: 'https://github.com/mwangiasford1/asford-browser',
     details: 'An experimental desktop browser project built with Python.'
+  },
+  {
+    title: 'AI Climate App',
+    description: 'AI-powered climate forecasting and analytics using environmental datasets.',
+    tech: 'Python, TensorFlow, Flask',
+    image: matrixImage,
+    link: 'https://github.com/mwangiasford1/ai-climate-app.git',
+    details: 'An AI climate platform for environmental forecasting and analytics.'
+  },
+  {
+    title: 'Barber App',
+    description: 'Barbershop management for appointments, customers, services, and staff roles.',
+    tech: 'Python, Flask, SQLAlchemy',
+    image: profileImage,
+    link: 'https://github.com/mwangiasford1/barber_app.git',
+    details: 'A management system for local barbershop operations.'
+  },
+  {
+    title: 'Livestock Management',
+    description: 'A platform for tracking and organizing livestock and farm operations.',
+    tech: 'Python, Web App',
+    image: greenMatrixImage,
+    link: 'https://github.com/mwangiasford1/livestock_management_project-ME.git',
+    details: 'A web platform for livestock and farm management.'
+  },
+  {
+    title: 'Parental Assistant',
+    description: 'A family task and reminder application for schedules and responsibilities.',
+    tech: 'React, Productivity',
+    image: techMatrixImage,
+    link: 'https://github.com/mwangiasford1/parental-assistant-app.git',
+    details: 'A productivity app designed for family planning and tasks.'
+  },
+  {
+    title: 'Smart File Manager',
+    description: 'An automated tool for sorting and managing local directories.',
+    tech: 'Python, Automation',
+    image: matrixImage,
+    link: 'https://github.com/mwangiasford1/file_manager.git',
+    details: 'A file organization tool that automates directory management.'
+  },
+  {
+    title: 'Wambo Task Management',
+    description: 'A task management application for work and collaboration.',
+    tech: 'JavaScript, Management',
+    image: profileImage,
+    link: 'https://github.com/mwangiasford1/Wambo-task-managment-app.git',
+    details: 'A project and task management application.'
   },
 ];
 
@@ -82,6 +140,11 @@ const Projects = () => {
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               whileHover={{ scale: 1.03, boxShadow: '0 8px 32px #1877f220' }}
             >
+              <img
+                src={project.image}
+                alt={`${project.title} project preview`}
+                style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 12, marginBottom: 16 }}
+              />
               <h3>{project.title}</h3>
               <p className="project-desc">{project.description}</p>
               <div className="project-tech">{project.tech}</div>

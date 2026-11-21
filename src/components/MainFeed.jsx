@@ -1,9 +1,10 @@
 import React from 'react';
-import { FaUser, FaTools, FaAward, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaTools, FaFolderOpen, FaAward, FaEnvelope } from 'react-icons/fa';
 import About from './About';
 import Skills from './Skills';
 import Activities from './Activities';
 import Contact from './Contact';
+import Projects from './Projects';
 
 const MainFeed = () => (
   <main className="main-feed">
@@ -16,6 +17,11 @@ const MainFeed = () => (
       <h2 className="card-title"><FaTools style={{ marginRight: 10, color: '#fbbf24' }} />Skills</h2>
       <hr className="card-divider" />
       <Skills />
+    </div>
+    <div className="card">
+      <h2 className="card-title"><FaFolderOpen style={{ marginRight: 10, color: '#34d399' }} />Projects</h2>
+      <hr className="card-divider" />
+      <Projects />
     </div>
     <div className="card">
       <h2 className="card-title"><FaAward style={{ marginRight: 10, color: '#f472b6' }} />Activities & Achievements</h2>
