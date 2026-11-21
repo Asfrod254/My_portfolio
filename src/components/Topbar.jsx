@@ -7,7 +7,6 @@ const sections = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'activities', label: 'Activities' },
-  { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -74,6 +73,11 @@ const Topbar = () => {
           <FaBars />
         </button>
         <div className="topbar-logo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 18, minWidth: 250 }}>
+          <img
+            className="topbar-profile-img"
+            src="https://lh3.googleusercontent.com/pw/AP1GczO26douIuhr9ZX0dKVo3ARW4GwxlCqjb6EsvIzvxk7mlf78kZxeep3hw2mE5UB-NIHE4uJCQ0rjDaEB57x_9Uz7QIN7jTfUFeupNbshUAviS1yn7JY=w160-h160-no"
+            alt="Asford Mwangi"
+          />
           <span style={{ fontWeight: 700, fontSize: '1.2rem', letterSpacing: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} className="animated-logo">
             {"Asford Mwangi".split("").map((char, idx) => (
               <span key={idx} className="logo-letter" style={{ animationDelay: `${0.4 + idx * 0.12}s` }}>{char === ' ' ? '\u00A0' : char}</span>

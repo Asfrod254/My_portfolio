@@ -1,158 +1,90 @@
 import React from 'react';
-import './styles/Portfolio.css'; // Create a CSS file for styling
+import './styles/Portfolio.css';
 import Activities from './components/Activities';
 import Contact from './components/Contact';
 import Topbar from './components/Topbar';
+import { FaArrowDown, FaArrowUpRightFromSquare, FaCode, FaServer } from 'react-icons/fa6';
+
+const profileImage = 'https://lh3.googleusercontent.com/pw/AP1GczO26douIuhr9ZX0dKVo3ARW4GwxlCqjb6EsvIzvxk7mlf78kZxeep3hw2mE5UB-NIHE4uJCQ0rjDaEB57x_9Uz7QIN7jTfUFeupNbshUAviS1yn7JY=w800-h800-no';
+
 const Portfolio = () => {
     return (
         <div className="portfolio-container">
             <Topbar />
-            
-            <header>
-                <h1>Asford Mwangi</h1>
-                <h2>Where Code Meets Culture: Crafting Expressive, Intelligent Experiences</h2>
-                <p>Backend engineer weaving real-time technology with the rhythm of expression—from APIs to Kikuyu lyrics.</p>
+
+            <header className="hero">
+                <div className="hero-grid" aria-hidden="true"></div>
+                <div className="hero-content">
+                    <div className="availability"><span></span> Available for opportunities</div>
+                    <p className="hero-kicker">Software Engineer · Nairobi, Kenya</p>
+                    <h1>Building systems with <em>purpose</em> and precision.</h1>
+                    <p className="hero-summary">
+                        I’m Asford Mwangi, a backend-focused engineer creating expressive, reliable products—from real-time lyric technology to scalable business platforms.
+                    </p>
+                    <div className="hero-actions">
+                        <a className="button button-primary" href="#skills">Explore my skills <FaArrowDown /></a>
+                        <a className="button button-secondary" href="/Asford_Mwangi_Refreshed_CV.pdf" target="_blank" rel="noreferrer">View résumé <FaArrowUpRightFromSquare /></a>
+                    </div>
+                </div>
+                <div className="hero-mark" aria-label="Portrait of Asford Mwangi">
+                    <img src={profileImage} alt="Asford Mwangi" />
+                    <div className="hero-mark-copy">
+                        <strong>Node.js</strong>
+                        <strong>React</strong>
+                        <strong>Real-time</strong>
+                    </div>
+                </div>
             </header>
-            
+
             <section id="about">
-                <h2>About Me</h2>
-                <p>I'm a software engineering student with a deep passion for backend development and intelligent systems. Whether it's syncing lyrics to vocals in real-time or building scalable APIs, I strive to create tools that are not only functional—but expressive.</p>
-                <ul>
-                    <li>Specialized in <strong>Node.js</strong>, <strong>Express</strong>, and <strong>React</strong></li>
-                    <li>Real-time speech recognition & lyric alignment</li>
-                    <li>Fluent in translating creativity into code</li>
-                    <li>Currently building <strong>Vocal Sync</strong>: a lyric matching app honoring Kikuyu culture 🎤</li>
-                </ul>
+                <div className="section-heading">
+                    <p>01 / About</p>
+                    <h2>Code is the tool.<br />Impact is the goal.</h2>
+                </div>
+                <div className="about-layout">
+                    <p className="about-lead">
+                        I’m a software engineering student passionate about backend development, intelligent systems, and thoughtful user experiences.
+                    </p>
+                    <div className="about-copy">
+                        <p>I specialize in building practical, maintainable systems with Node.js and React. My work bridges engineering fundamentals with real human needs—whether that means synchronizing vocals with Kikuyu lyrics or simplifying daily business operations.</p>
+                        <div className="focus-list">
+                            <span><FaServer /> API & backend systems</span>
+                            <span><FaCode /> Real-time experiences</span>
+                        </div>
+                    </div>
+                </div>
             </section>
-            
+
             <section id="skills">
-                <h2>Skills</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Tools / Skills</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Backend</td>
-                            <td>Node.js, Express.js, API Design, MongoDB</td>
-                        </tr>
-                        <tr>
-                            <td>Frontend</td>
-                            <td>React.js, Vite, Tailwind CSS</td>
-                        </tr>
-                        <tr>
-                            <td>Real-Time Tech</td>
-                            <td>Web Speech API, Socket.IO, Lyric Synchronization</td>
-                        </tr>
-                        <tr>
-                            <td>Dev Tools</td>
-                            <td>Git, VS Code, Postman, Docker</td>
-                        </tr>
-                        <tr>
-                            <td>Cultural Integration</td>
-                            <td>Kikuyu lyrics, Swahili fluency, Localization strategies</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className="section-heading">
+                    <p>02 / Capabilities</p>
+                    <h2>A modern engineering stack.</h2>
+                </div>
+                <div className="skills-grid">
+                    <article><span>01</span><h3>Backend & Automation</h3><p>Python · Node.js · Express · MCPs · REST APIs · GraphQL · MongoDB · SQL · Oracle · Redis</p></article>
+                    <article><span>02</span><h3>Creative & Frontend</h3><p>React · JavaScript · Vite · CSS · Blender animation</p></article>
+                    <article><span>03</span><h3>Real-time</h3><p>Web Speech API · Socket.IO · Synchronization</p></article>
+                    <article><span>04</span><h3>Infrastructure & Recovery</h3><p>Linux · AWS · Docker · Proxmox · VirtualBox · Data recovery · Git · Postman · VS Code</p></article>
+                </div>
             </section>
-            
-            <section id="projects">
-    <h2>🚀 Projects</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-        {/* Project Card Example */}
-        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
-            <h3 className="mb-3 text-xl font-semibold">barber_app</h3>
-            <p className="text-gray-700 mb-5 text-base">Barbershop management system for appointments, user roles, and services.</p>
-            <a href="https://github.com/mwangiasford1/barber_app.git" target="_blank" rel="noopener noreferrer"
-                className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
-                View on GitHub
-            </a>
-        </div>
-        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
-            <h3 className="mb-3 text-xl font-semibold">livestock_management_project-ME</h3>
-            <p className="text-gray-700 mb-5 text-base">Livestock management platform for tracking and managing farm animals.</p>
-            <a href="https://github.com/mwangiasford1/livestock_management_project-ME.git" target="_blank" rel="noopener noreferrer"
-                className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
-                View on GitHub
-            </a>
-        </div>
-        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
-            <h3 className="mb-3 text-xl font-semibold">parental-assistant-app</h3>
-            <p className="text-gray-700 mb-5 text-base">Parental assistant app for managing family tasks and reminders.</p>
-            <a href="https://github.com/mwangiasford1/parental-assistant-app.git" target="_blank" rel="noopener noreferrer"
-                className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
-                View on GitHub
-            </a>
-        </div>
-        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
-            <h3 className="mb-3 text-xl font-semibold">PESANTE-ENTERPRICES</h3>
-            <p className="text-gray-700 mb-5 text-base">Business management system for PESANTE ENTERPRICES.</p>
-            <div className="flex gap-2 flex-wrap">
-                <a href="https://pesante-enterprices-main-1.onrender.com/" target="_blank" rel="noopener noreferrer"
-                    className="bg-green-600 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-green-500 transition">
-                    Live Demo
-                </a>
-                <a href="https://github.com/mwangiasford1/PESANTE-ENTERPRICES.git" target="_blank" rel="noopener noreferrer"
-                    className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
-                    View on GitHub
-                </a>
-            </div>
-        </div>
-        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
-            <h3 className="mb-3 text-xl font-semibold">ai-climate-app</h3>
-            <p className="text-gray-700 mb-5 text-base">AI-powered climate forecasting and analytics application.</p>
-            <a href="https://github.com/mwangiasford1/ai-climate-app.git" target="_blank" rel="noopener noreferrer"
-                className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
-                View on GitHub
-            </a>
-        </div>
-        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
-            <h3 className="mb-3 text-xl font-semibold">Smart File Manager</h3>
-            <p className="text-gray-700 mb-5 text-base">Automated file organization tool for managing and sorting files efficiently.</p>
-            <div className="flex gap-2 flex-wrap">
-                <a href="https://smart-file-manager-6tqp.onrender.com" target="_blank" rel="noopener noreferrer"
-                    className="bg-green-600 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-green-500 transition">
-                    Live Demo
-                </a>
-                <a href="https://github.com/mwangiasford1/file_manager.git" target="_blank" rel="noopener noreferrer"
-                    className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
-                    View on GitHub
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
 
             <Activities />
-            
-            <section id="blog">
-                <h2>Blog or Insights</h2>
-                <ul>
-                    <li>How I Built a Lyric Sync App From Scratch with Web Speech API</li>
-                    <li>Blending Tech and Tradition: Why Kikuyu Lyrics Belong in Code</li>
-                    <li>APIs With a Soul: Building Backend Systems That Express</li>
-                </ul>
-            </section>
-            
+
             <Contact />
-            
+
             <footer>
-    <h2>Let's Connect</h2>
-    <p>Let's create something expressive together!</p>
-    <div className="flex flex-col gap-4 items-center mt-8">
-        <p><strong>Email:</strong> <a href="mailto:asfordmwangi@gmail.com">asfordmwangi@gmail.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+254740953975">+254 740 953 975</a></p>
-        <p><strong>Location:</strong> Nairobi, Kenya</p>
-        <div className="flex gap-8 mt-4 flex-wrap justify-center">
-            <a href="https://github.com/mwangiasford1" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/asfordmwang" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://www.facebook.com/Bro%20Richie%27s%20Richer" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-    </div>
-</footer>
+                <div className="footer-main">
+                    <p>Have a project in mind?</p>
+                    <a href="mailto:asfordmwangi@gmail.com">Let’s build something.</a>
+                </div>
+                <div className="footer-meta">
+                    <span>© {new Date().getFullYear()} Asford Mwangi</span>
+                    <div>
+                        <a href="https://github.com/mwangiasford1" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/asfordmwang" target="_blank" rel="noreferrer">LinkedIn</a>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

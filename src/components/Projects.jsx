@@ -4,32 +4,46 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const projects = [
   {
-    title: 'AI Climate App',
-    description: 'AI-powered climate forecasting application using Flask, TensorFlow, and ERA5 climate data. Provides API endpoints for predictions, data retrieval, and health checks.',
-    tech: 'Flask, Gunicorn, TensorFlow, Scikit-Learn, Pandas, Chart.js, Render',
-    link: 'https://github.com/mwangiasford1/ai-climate-app.git',
-    details: 'This project integrates machine learning with real climate data to provide actionable insights. Finalist at PLP Hackathon 2024.'
+    title: 'StudyMeet',
+    description: 'A real-time virtual classroom with WebRTC video, collaborative whiteboards, notes, chat, and classroom gamification.',
+    tech: 'React, WebRTC, Socket.IO, Node.js',
+    link: 'https://github.com/mwangiasford1/Studymeet-app',
+    details: 'Supports video conferencing, teacher and student roles, interactive whiteboards, collaborative notes, chat, screen sharing, and meeting controls.'
   },
   {
-    title: 'Barber App',
-    description: 'Barbershop Management System for appointments, user roles, and services. Features role-based access, appointment booking, AI assistant, and dashboard.',
-    tech: 'Flask, SQLAlchemy, Flask-Login, MySQL',
-    link: 'https://github.com/mwangiasford1/barber_app.git',
-    details: 'Built for local businesses to manage bookings and staff efficiently. Includes AI assistant for customer queries.'
+    title: 'Universal Accessibility Layer',
+    description: 'A SaaS accessibility layer that audits, fixes, and enhances websites in real time using AI.',
+    tech: 'JavaScript, AI, SaaS',
+    link: 'https://github.com/mwangiasford1/Universal-Accessibility-Layer-UAL-',
+    details: 'Designed as a plug-and-play accessibility service for automated audits and real-time compliance and inclusivity improvements.'
   },
   {
-    title: 'Crypto Chatbot (PLP AI Assignment)',
-    description: 'A Python-based crypto chatbot developed as part of a software tools assignment. (See repo for details.)',
+    title: 'Land ReGen',
+    description: 'A soil health monitoring dashboard for vegetation, erosion, moisture, alerts, and recommendations.',
+    tech: 'React, Node.js, Express, Supabase',
+    link: 'https://github.com/mwangiasford1/Land-ReGen',
+    details: 'Provides region-based soil monitoring, interactive KPIs and charts, voice commands, alert management, and AI-style recommendations.'
+  },
+  {
+    title: 'PESANTE ENTERPRISES',
+    description: 'A full-stack real estate platform for property listings, inquiries, appointments, and secure administration.',
+    tech: 'React, Node.js, Express, MongoDB',
+    link: 'https://github.com/mwangiasford1/PESANTE-ENTERPRICES-MAIN',
+    details: 'Includes public property discovery, appointment scheduling, inquiry management, image uploads, JWT authentication, and an admin portal.'
+  },
+  {
+    title: 'Matrix Portfolio',
+    description: 'A modern matrix-inspired developer portfolio experience with responsive visual sections.',
+    tech: 'React, JavaScript, CSS',
+    link: 'https://github.com/mwangiasford1/matrix-portfolio',
+    details: 'A responsive portfolio project focused on an immersive visual developer presentation.'
+  },
+  {
+    title: 'Asford Browser',
+    description: 'A Python browser project exploring custom navigation and desktop web experience features.',
     tech: 'Python',
-    link: 'https://github.com/mwangiasford1/plp-ai-software-tools-assignment-week1-crypto_chatbot-.py.git',
-    details: 'Analyzes currency trends and sentiment. Presented in the PLP AI Tools Challenge.'
-  },
-  {
-    title: 'React Assignment',
-    description: 'A React-based project for assignment work. (See repo for details.)',
-    tech: 'React',
-    link: 'https://github.com/mwangiasford1/REACT-ASSIGNMENT.git',
-    details: 'Demonstrates proficiency in React fundamentals and component-based design.'
+    link: 'https://github.com/mwangiasford1/asford-browser',
+    details: 'An experimental desktop browser project built with Python.'
   },
 ];
 

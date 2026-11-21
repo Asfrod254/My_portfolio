@@ -12,20 +12,20 @@ const Skills = () => (
       </thead>
       <tbody>
         <tr>
-          <td>Backend</td>
-          <td>Node.js, Express.js, API Design, MongoDB</td>
+          <td>01 / Backend</td>
+          <td>Python · Node.js · Express · MCPs · REST APIs · GraphQL · MongoDB · SQL · Oracle · Redis</td>
         </tr>
         <tr>
-          <td>Frontend</td>
-          <td>React.js, Vite, Tailwind CSS</td>
+          <td>02 / Frontend</td>
+          <td>React · JavaScript · Vite · CSS · Blender animation</td>
         </tr>
         <tr>
-          <td>Real-Time Tech</td>
-          <td>Web Speech API, Socket.IO, Lyric Synchronization</td>
+          <td>03 / Real-time</td>
+          <td>Web Speech API · Socket.IO · Synchronization</td>
         </tr>
         <tr>
-          <td>Dev Tools</td>
-          <td>Git, VS Code, Postman, Docker</td>
+          <td>04 / Tools</td>
+          <td>Linux · AWS · Docker · Proxmox · VirtualBox · Data recovery · Git · Postman · VS Code</td>
         </tr>
         <tr>
           <td>Cultural Integration:  </td>
