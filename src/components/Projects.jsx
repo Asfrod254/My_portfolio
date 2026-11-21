@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import matrixImage from '../assets/Matrix motherboard i.png';
-import greenMatrixImage from '../assets/gemini-2.5-flash-image_turn_this_image_into_a_green_themed_advanced_matrix_image_with_high_visibility_a-0.jpg';
-import techMatrixImage from '../assets/lucid-origin_a_green_themed_advanced_tech_mathore_board_matrix_image_with_high_similarlity-0.jpg';
-import profileImage from '../assets/Asfor-img.jpg';
+const projectImages = [
+  'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1551281044-8d8ad0a6d3f?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85',
+];
 
 const projects = [
   {
     title: 'StudyMeet',
     description: 'A real-time virtual classroom with WebRTC video, collaborative whiteboards, notes, chat, and classroom gamification.',
     tech: 'React, WebRTC, Socket.IO, Node.js',
-    image: greenMatrixImage,
+    image: projectImages[0],
     link: 'https://github.com/mwangiasford1/Studymeet-app',
     details: 'Supports video conferencing, teacher and student roles, interactive whiteboards, collaborative notes, chat, screen sharing, and meeting controls.'
   },
@@ -19,7 +29,7 @@ const projects = [
     title: 'Universal Accessibility Layer',
     description: 'A SaaS accessibility layer that audits, fixes, and enhances websites in real time using AI.',
     tech: 'JavaScript, AI, SaaS',
-    image: techMatrixImage,
+    image: projectImages[1],
     link: 'https://github.com/mwangiasford1/Universal-Accessibility-Layer-UAL-',
     details: 'Designed as a plug-and-play accessibility service for automated audits and real-time compliance and inclusivity improvements.'
   },
@@ -27,7 +37,7 @@ const projects = [
     title: 'Land ReGen',
     description: 'A soil health monitoring dashboard for vegetation, erosion, moisture, alerts, and recommendations.',
     tech: 'React, Node.js, Express, Supabase',
-    image: matrixImage,
+    image: projectImages[2],
     link: 'https://github.com/mwangiasford1/Land-ReGen',
     details: 'Provides region-based soil monitoring, interactive KPIs and charts, voice commands, alert management, and AI-style recommendations.'
   },
@@ -35,7 +45,7 @@ const projects = [
     title: 'PESANTE ENTERPRISES',
     description: 'A full-stack real estate platform for property listings, inquiries, appointments, and secure administration.',
     tech: 'React, Node.js, Express, MongoDB',
-    image: profileImage,
+    image: projectImages[3],
     link: 'https://github.com/mwangiasford1/PESANTE-ENTERPRICES-MAIN',
     details: 'Includes public property discovery, appointment scheduling, inquiry management, image uploads, JWT authentication, and an admin portal.'
   },
@@ -43,7 +53,7 @@ const projects = [
     title: 'Matrix Portfolio',
     description: 'A modern matrix-inspired developer portfolio experience with responsive visual sections.',
     tech: 'React, JavaScript, CSS',
-    image: greenMatrixImage,
+    image: projectImages[4],
     link: 'https://github.com/mwangiasford1/matrix-portfolio',
     details: 'A responsive portfolio project focused on an immersive visual developer presentation.'
   },
@@ -51,7 +61,7 @@ const projects = [
     title: 'Asford Browser',
     description: 'A Python browser project exploring custom navigation and desktop web experience features.',
     tech: 'Python',
-    image: techMatrixImage,
+    image: projectImages[5],
     link: 'https://github.com/mwangiasford1/asford-browser',
     details: 'An experimental desktop browser project built with Python.'
   },
@@ -59,7 +69,7 @@ const projects = [
     title: 'AI Climate App',
     description: 'AI-powered climate forecasting and analytics using environmental datasets.',
     tech: 'Python, TensorFlow, Flask',
-    image: matrixImage,
+    image: projectImages[6],
     link: 'https://github.com/mwangiasford1/ai-climate-app.git',
     details: 'An AI climate platform for environmental forecasting and analytics.'
   },
@@ -67,7 +77,7 @@ const projects = [
     title: 'Barber App',
     description: 'Barbershop management for appointments, customers, services, and staff roles.',
     tech: 'Python, Flask, SQLAlchemy',
-    image: profileImage,
+    image: projectImages[7],
     link: 'https://github.com/mwangiasford1/barber_app.git',
     details: 'A management system for local barbershop operations.'
   },
@@ -75,7 +85,7 @@ const projects = [
     title: 'Livestock Management',
     description: 'A platform for tracking and organizing livestock and farm operations.',
     tech: 'Python, Web App',
-    image: greenMatrixImage,
+    image: projectImages[8],
     link: 'https://github.com/mwangiasford1/livestock_management_project-ME.git',
     details: 'A web platform for livestock and farm management.'
   },
@@ -83,7 +93,7 @@ const projects = [
     title: 'Parental Assistant',
     description: 'A family task and reminder application for schedules and responsibilities.',
     tech: 'React, Productivity',
-    image: techMatrixImage,
+    image: projectImages[9],
     link: 'https://github.com/mwangiasford1/parental-assistant-app.git',
     details: 'A productivity app designed for family planning and tasks.'
   },
@@ -91,7 +101,7 @@ const projects = [
     title: 'Smart File Manager',
     description: 'An automated tool for sorting and managing local directories.',
     tech: 'Python, Automation',
-    image: matrixImage,
+    image: projectImages[10],
     link: 'https://github.com/mwangiasford1/file_manager.git',
     details: 'A file organization tool that automates directory management.'
   },
@@ -99,7 +109,7 @@ const projects = [
     title: 'Wambo Task Management',
     description: 'A task management application for work and collaboration.',
     tech: 'JavaScript, Management',
-    image: profileImage,
+    image: projectImages[11],
     link: 'https://github.com/mwangiasford1/Wambo-task-managment-app.git',
     details: 'A project and task management application.'
   },
