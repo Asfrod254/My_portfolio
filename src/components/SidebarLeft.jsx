@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaFacebook, FaDownload } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
 
 const SidebarLeft = () => (
   <aside className="sidebar-left">
@@ -28,31 +27,6 @@ const SidebarLeft = () => (
       <Link to="/profile" className="sidebar-resume-btn" style={{marginTop: 8, background: '#232946'}}>
         View Full Profile
       </Link>
-      <Link to="/collaborators" className="sidebar-resume-btn" style={{marginTop: 8, background: '#6366f1'}}>
-        Collaborators
-      </Link>
-      <div style={{ textAlign: 'center', margin: '1.5rem 0' }}>
-        <a
-          href="/Asford_Mwangi_Refreshed_CV.pdf"
-          download
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'inline-block',
-            background: '#6366f1',
-            color: '#fff',
-            padding: '0.6rem 1.5rem',
-            borderRadius: 8,
-            fontWeight: 600,
-            fontSize: 16,
-            textDecoration: 'none',
-            boxShadow: '0 2px 8px #6366f133',
-            transition: 'background 0.2s',
-          }}
-        >
-          Download Resume
-        </a>
-      </div>
     </div>
   </aside>
 );

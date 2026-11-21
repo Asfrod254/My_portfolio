@@ -1625,48 +1625,6 @@ body, .theme-light, .theme-dark {
   pointer-events: auto;
 }
 
-.collaborators-page {
-  max-width: 600px;
-  margin: 3rem auto 2rem auto;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px #6366f122;
-  padding: 2.5rem 2rem;
-  text-align: left;
-}
-.collaborators-page h2 {
-  font-size: 2rem;
-  color: #6366f1;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.collaborators-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.collaborator-item {
-  font-size: 1.1rem;
-  margin-bottom: 1.2rem;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid #e0e0e0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-.collaborator-item:last-child {
-  border-bottom: none;
-}
-.collaborator-item a {
-  color: #2563eb;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.18s;
-}
-.collaborator-item a:hover {
-  color: #fbbf24;
-}
 
 /* Modern portfolio presentation */
 

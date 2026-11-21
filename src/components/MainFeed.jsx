@@ -4,7 +4,6 @@ import About from './About';
 import Skills from './Skills';
 import Activities from './Activities';
 import Contact from './Contact';
-import Collaborators from '../Collaborators';
 
 const MainFeed = () => (
   <main className="main-feed">
@@ -27,11 +26,6 @@ const MainFeed = () => (
       <h2 className="card-title"><FaEnvelope style={{ marginRight: 10, color: '#60a5fa' }} />Contact</h2>
       <hr className="card-divider" />
       <Contact />
-    </div>
-    <div className="card">
-      <h2 className="card-title">Collaborators & Developers</h2>
-      <hr className="card-divider" />
-      <Collaborators />
     </div>
   </main>
 );

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../App';
-import { FaSun, FaMoon, FaGithub, FaLinkedin, FaFacebook, FaBars, FaTimes, FaUser } from 'react-icons/fa';
+import { FaSun, FaMoon, FaGithub, FaLinkedin, FaFacebook, FaBars, FaTimes } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 
 const sections = [
@@ -135,7 +135,6 @@ const Topbar = () => {
               {section.label}
             </a>
           ))}
-          <Link to="/collaborators" onClick={() => setMenuOpen(false)} style={{ color: '#fff', fontSize: 22, margin: 14 }}>Collaborators</Link>
         </div>
       )}
       {/* Desktop nav */}
@@ -154,7 +153,6 @@ const Topbar = () => {
           </a>
         ))}
         <Link to="/profile" className="nav-link-profile">Profile</Link>
-        <Link to="/collaborators" className="nav-link-collaborators">Collaborators</Link>
       </div>
       <div className="topbar-divider"></div>
       {location.pathname !== '/profile' && (
