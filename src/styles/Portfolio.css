@@ -2124,6 +2124,22 @@ body, .theme-light, .theme-dark {
   flex-direction: column;
 }
 
+.project-card-body .project-tags {
+  min-height: 34px;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.project-card-body h3 {
+  min-height: 44px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.project-card-body p {
+  min-height: 78px;
+}
+
 .project-index {
   color: #98a2b3;
   font-size: 0.78rem;
@@ -2201,6 +2217,7 @@ body, .theme-light, .theme-dark {
 
 .activity-card {
   overflow: hidden;
+  min-height: 300px;
   border: 1px solid rgba(27, 27, 31, 0.08);
   border-radius: 12px;
   background: #fff;
@@ -2365,8 +2382,51 @@ body, .theme-light, .theme-dark {
   .section-heading p { margin: 0; }
   .about-layout { grid-template-columns: 1fr; gap: 28px; margin-left: 0; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .project-grid { grid-template-columns: 1fr; }
-  .activities-grid { grid-template-columns: 1fr; }
+  #projects,
+  #activities {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #projects .section-heading,
+  #activities .section-heading {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .project-grid,
+  .activities-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 82vw);
+    grid-template-columns: none;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px 24px 18px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 24px;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .project-card,
+  .activity-card {
+    scroll-snap-align: start;
+  }
+  .project-grid::-webkit-scrollbar,
+  .activities-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+  .project-grid::-webkit-scrollbar-track,
+  .activities-grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .project-grid::-webkit-scrollbar-thumb,
+  .activities-grid::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #cbd5e1;
+  }
+  .project-card {
+    min-height: 470px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -2379,7 +2439,14 @@ body, .theme-light, .theme-dark {
   .skills-grid { grid-template-columns: 1fr; }
   .skills-grid article { min-height: 190px; }
   .skills-grid article > span { margin-bottom: 38px; }
-  .project-card { min-height: 380px; }
+  .project-grid,
+  .activities-grid {
+    grid-auto-columns: minmax(260px, 86vw);
+  }
+  .project-card { min-height: 450px; }
+  .project-card-body { min-height: 230px; }
+  .activity-card { min-height: 290px; }
+  .activity-visual { height: 150px; }
   .contact-form { grid-template-columns: 1fr; }
   .contact-form textarea,
   .contact-form button,
