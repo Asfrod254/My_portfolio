@@ -94,6 +94,9 @@ const projects = [
   { name: 'Wambo Task Management', description: 'A task management application for organizing work, collaboration, and progress.', tags: ['JavaScript', 'Management'], image: projectImages[11], github: 'https://github.com/mwangiasford1/Wambo-task-managment-app.git' },
   { name: 'CasaConnect', description: 'A property and accommodation connection platform for discovering and managing real estate opportunities.', tags: ['Web App', 'Real Estate'], image: projectImages[12], github: 'https://github.com/Asfrod254/CASACONNECT.co.ke.git' },
   { name: 'Clothe Store', description: 'A fashion e-commerce application for browsing and purchasing clothing products.', tags: ['Web App', 'E-commerce'], image: projectImages[13], github: 'https://github.com/Asfrod254/CLOTHE-STORE.git' },
+  { name: 'Taxi App', description: 'A full-stack ride-hailing platform with rider and driver apps, ride management, fare estimates, and M-Pesa payments.', tags: ['React', 'React Native', 'Node.js', 'Supabase'], image: projectImages[0], github: 'https://github.com/Asfrod254/TAXI-APP' },
+  { name: 'STEVO POS Suite', description: 'A retail point-of-sale suite with checkout, inventory, orders, reporting, and an offline Python desktop POS.', tags: ['React', 'Node.js', 'Python', 'SQLite'], image: projectImages[4], github: 'https://github.com/Asfrod254/Stevo-pos.' },
+  { name: 'AshTech', description: 'Currently in development: a full-stack platform for project showcases, community Q&A, notifications, and appointment booking.', tags: ['React', 'Material UI', 'Express', 'Supabase', 'In Progress'], image: projectImages[10], github: 'https://github.com/Asfrod254/asteck_real_web' },
 ];
 
 const profileImage = 'https://lh3.googleusercontent.com/pw/AP1GczO26douIuhr9ZX0dKVo3ARW4GwxlCqjb6EsvIzvxk7mlf78kZxeep3hw2mE5UB-NIHE4uJCQ0rjDaEB57x_9Uz7QIN7jTfUFeupNbshUAviS1yn7JY=w800-h800-no';
