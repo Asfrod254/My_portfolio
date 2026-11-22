@@ -1987,6 +1987,76 @@ body, .theme-light, .theme-dark {
   max-width: 210px;
 }
 
+.tech-icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.tech-badge {
+  min-width: 72px;
+  min-height: 68px;
+  padding: 9px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fbfcfd;
+  color: #344054;
+  text-align: center;
+  transition: 180ms ease;
+}
+
+.tech-badge svg {
+  width: 22px;
+  height: 22px;
+  color: #64748b;
+}
+
+.tech-badge span {
+  max-width: 82px;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.tech-badge:hover {
+  transform: translateY(-3px);
+  border-color: #b9c2cf;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(16, 24, 40, 0.08);
+}
+
+.skills-table-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-table-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 9px;
+  border: 1px solid #e6e9ef;
+  border-radius: 999px;
+  background: #fff;
+  color: #344054;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.skills-table-badge svg {
+  width: 16px;
+  height: 16px;
+  color: #64748b;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

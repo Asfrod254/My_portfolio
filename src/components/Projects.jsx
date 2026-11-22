@@ -14,6 +14,8 @@ const projectImages = [
   'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85',
   'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85',
   'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=85',
 ];
 
 const projects = [
@@ -112,6 +114,22 @@ const projects = [
     image: projectImages[11],
     link: 'https://github.com/mwangiasford1/Wambo-task-managment-app.git',
     details: 'A project and task management application.'
+  },
+  {
+    title: 'CasaConnect',
+    description: 'A property and accommodation connection platform for discovering and managing real estate opportunities.',
+    tech: 'Web Application, Real Estate',
+    image: projectImages[12],
+    link: 'https://github.com/Asfrod254/CASACONNECT.co.ke.git',
+    details: 'A real estate platform focused on connecting property seekers with available accommodation and listing opportunities.'
+  },
+  {
+    title: 'Clothe Store',
+    description: 'A fashion e-commerce application for browsing and purchasing clothing products.',
+    tech: 'Web Application, E-commerce',
+    image: projectImages[13],
+    link: 'https://github.com/Asfrod254/CLOTHE-STORE.git',
+    details: 'An online clothing store project for presenting fashion products and supporting e-commerce shopping workflows.'
   },
 ];
 

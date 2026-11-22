@@ -1,4 +1,43 @@
 import React from 'react';
+import {
+  SiPython, SiNodedotjs, SiExpress, SiGraphql, SiMongodb,
+  SiMysql, SiOracle, SiRedis, SiReact, SiJavascript, SiVite,
+  SiCss3, SiBlender, SiSocketdotio, SiLinux, SiAmazonwebservices,
+  SiDocker, SiProxmox, SiVirtualbox, SiGit, SiPostman, SiVscodium,
+} from 'react-icons/si';
+import { FaMicrophoneLines, FaPlug, FaRotate, FaServer, FaDatabase } from 'react-icons/fa6';
+
+const skillRows = [
+  {
+    category: '01 / Backend',
+    items: [
+      ['Python', SiPython], ['Node.js', SiNodedotjs], ['Express', SiExpress],
+      ['MCPs', FaPlug], ['REST APIs', FaServer], ['GraphQL', SiGraphql],
+      ['MongoDB', SiMongodb], ['SQL', SiMysql], ['Oracle', SiOracle], ['Redis', SiRedis],
+    ],
+  },
+  {
+    category: '02 / Frontend',
+    items: [
+      ['React', SiReact], ['JavaScript', SiJavascript], ['Vite', SiVite],
+      ['CSS', SiCss3], ['Blender', SiBlender],
+    ],
+  },
+  {
+    category: '03 / Real-time',
+    items: [
+      ['Web Speech API', FaMicrophoneLines], ['Socket.IO', SiSocketdotio], ['Synchronization', FaRotate],
+    ],
+  },
+  {
+    category: '04 / Tools',
+    items: [
+      ['Linux', SiLinux], ['AWS', SiAmazonwebservices], ['Docker', SiDocker],
+      ['Proxmox', SiProxmox], ['VirtualBox', SiVirtualbox], ['Data recovery', FaDatabase],
+      ['Git', SiGit], ['Postman', SiPostman], ['VS Code', SiVscodium],
+    ],
+  },
+];
 
 const Skills = () => (
   <section id="skills">
@@ -11,26 +50,21 @@ const Skills = () => (
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>01 / Backend</td>
-          <td>Python · Node.js · Express · MCPs · REST APIs · GraphQL · MongoDB · SQL · Oracle · Redis</td>
-        </tr>
-        <tr>
-          <td>02 / Frontend</td>
-          <td>React · JavaScript · Vite · CSS · Blender animation</td>
-        </tr>
-        <tr>
-          <td>03 / Real-time</td>
-          <td>Web Speech API · Socket.IO · Synchronization</td>
-        </tr>
-        <tr>
-          <td>04 / Tools</td>
-          <td>Linux · AWS · Docker · Proxmox · VirtualBox · Data recovery · Git · Postman · VS Code</td>
-        </tr>
-        <tr>
-          <td>Cultural Integration:  </td>
-          
-        </tr>
+        {skillRows.map(({ category, items }) => (
+          <tr key={category}>
+            <td>{category}</td>
+            <td>
+              <div className="skills-table-icons">
+                {items.map(([name, Icon]) => (
+                  <span className="skills-table-badge" title={name} key={name}>
+                    <Icon aria-hidden="true" />
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   </section>

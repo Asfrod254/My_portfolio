@@ -4,6 +4,14 @@ import Activities from './components/Activities';
 import Contact from './components/Contact';
 import Topbar from './components/Topbar';
 import { FaArrowDown, FaArrowUpRightFromSquare, FaCode, FaServer } from 'react-icons/fa6';
+import {
+  SiPython, SiNodedotjs, SiExpress, SiGraphql, SiMongodb,
+  SiMysql, SiOracle, SiRedis, SiReact, SiJavascript, SiVite,
+  SiCss3, SiBlender, SiSocketdotio, SiLinux, SiAmazonwebservices,
+  SiDocker, SiProxmox, SiVirtualbox, SiGit, SiPostman,
+  SiVscodium,
+} from 'react-icons/si';
+import { FaMicrophoneLines, FaPlug, FaRotate, FaDatabase } from 'react-icons/fa6';
 const projectImages = [
   'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85',
   'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85',
@@ -17,6 +25,58 @@ const projectImages = [
   'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85',
   'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85',
   'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85',
+  'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=85',
+];
+
+const techGroups = [
+  {
+    title: 'Backend & Automation',
+    items: [
+      { name: 'Python', Icon: SiPython },
+      { name: 'Node.js', Icon: SiNodedotjs },
+      { name: 'Express', Icon: SiExpress },
+      { name: 'MCPs', Icon: FaPlug },
+      { name: 'REST APIs', Icon: FaServer },
+      { name: 'GraphQL', Icon: SiGraphql },
+      { name: 'MongoDB', Icon: SiMongodb },
+      { name: 'SQL', Icon: SiMysql },
+      { name: 'Oracle', Icon: SiOracle },
+      { name: 'Redis', Icon: SiRedis },
+    ],
+  },
+  {
+    title: 'Creative & Frontend',
+    items: [
+      { name: 'React', Icon: SiReact },
+      { name: 'JavaScript', Icon: SiJavascript },
+      { name: 'Vite', Icon: SiVite },
+      { name: 'CSS', Icon: SiCss3 },
+      { name: 'Blender', Icon: SiBlender },
+    ],
+  },
+  {
+    title: 'Real-time',
+    items: [
+      { name: 'Web Speech', Icon: FaMicrophoneLines },
+      { name: 'Socket.IO', Icon: SiSocketdotio },
+      { name: 'Sync', Icon: FaRotate },
+    ],
+  },
+  {
+    title: 'Infrastructure & Recovery',
+    items: [
+      { name: 'Linux', Icon: SiLinux },
+      { name: 'AWS', Icon: SiAmazonwebservices },
+      { name: 'Docker', Icon: SiDocker },
+      { name: 'Proxmox', Icon: SiProxmox },
+      { name: 'VirtualBox', Icon: SiVirtualbox },
+      { name: 'Recovery', Icon: FaDatabase },
+      { name: 'Git', Icon: SiGit },
+      { name: 'Postman', Icon: SiPostman },
+      { name: 'VS Code', Icon: SiVscodium },
+    ],
+  },
 ];
 
 const projects = [
@@ -32,6 +92,8 @@ const projects = [
   { name: 'Parental Assistant', description: 'A family task and reminder application for organizing schedules and responsibilities.', tags: ['React', 'Productivity'], image: projectImages[9], github: 'https://github.com/mwangiasford1/parental-assistant-app.git' },
   { name: 'Smart File Manager', description: 'An automated file organization tool for sorting and managing local directories.', tags: ['Python', 'Automation'], image: projectImages[10], live: 'https://smart-file-manager-6tqp.onrender.com', github: 'https://github.com/mwangiasford1/file_manager.git' },
   { name: 'Wambo Task Management', description: 'A task management application for organizing work, collaboration, and progress.', tags: ['JavaScript', 'Management'], image: projectImages[11], github: 'https://github.com/mwangiasford1/Wambo-task-managment-app.git' },
+  { name: 'CasaConnect', description: 'A property and accommodation connection platform for discovering and managing real estate opportunities.', tags: ['Web App', 'Real Estate'], image: projectImages[12], github: 'https://github.com/Asfrod254/CASACONNECT.co.ke.git' },
+  { name: 'Clothe Store', description: 'A fashion e-commerce application for browsing and purchasing clothing products.', tags: ['Web App', 'E-commerce'], image: projectImages[13], github: 'https://github.com/Asfrod254/CLOTHE-STORE.git' },
 ];
 
 const profileImage = 'https://lh3.googleusercontent.com/pw/AP1GczO26douIuhr9ZX0dKVo3ARW4GwxlCqjb6EsvIzvxk7mlf78kZxeep3hw2mE5UB-NIHE4uJCQ0rjDaEB57x_9Uz7QIN7jTfUFeupNbshUAviS1yn7JY=w800-h800-no';
@@ -90,10 +152,20 @@ const Portfolio = () => {
                     <h2>A modern engineering stack.</h2>
                 </div>
                 <div className="skills-grid">
-                    <article><span>01</span><h3>Backend & Automation</h3><p>Python · Node.js · Express · MCPs · REST APIs · GraphQL · MongoDB · SQL · Oracle · Redis</p></article>
-                    <article><span>02</span><h3>Creative & Frontend</h3><p>React · JavaScript · Vite · CSS · Blender animation</p></article>
-                    <article><span>03</span><h3>Real-time</h3><p>Web Speech API · Socket.IO · Synchronization</p></article>
-                    <article><span>04</span><h3>Infrastructure & Recovery</h3><p>Linux · AWS · Docker · Proxmox · VirtualBox · Data recovery · Git · Postman · VS Code</p></article>
+                    {techGroups.map((group, index) => (
+                        <article key={group.title}>
+                            <span>0{index + 1}</span>
+                            <h3>{group.title}</h3>
+                            <div className="tech-icon-grid" aria-label={group.title}>
+                                {group.items.map(({ name, Icon }) => (
+                                    <div className="tech-badge" key={name} title={name}>
+                                        <Icon aria-hidden="true" />
+                                        <span>{name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </article>
+                    ))}
                 </div>
             </section>
 
